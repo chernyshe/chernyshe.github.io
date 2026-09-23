@@ -441,13 +441,12 @@ div.accountInfo {
 
 .resource-label {
     display: block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
-    font-variant: bold small-caps;
-    font-weight: 700;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+    font-size: 1.35rem;
+    font-variant: small-caps;
+    font-weight: 900;
     letter-spacing: 0.06em;
     color: var(--resource-label);
-    text-transform: uppercase;
     border-bottom: 1px solid var(--resource-border);
     margin-bottom: 0.85rem;
 }
@@ -496,7 +495,7 @@ div.accountInfo {
     position: absolute;
     left: 0;
     top: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--pub-counter);
@@ -545,7 +544,7 @@ div.accountInfo {
     border: 1px solid var(--btn-border);
     border-radius: 4px;
     padding: 3px 10px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
     text-decoration: none !important;
@@ -602,7 +601,7 @@ div.accountInfo {
     display: flex;
     align-items: center;
     padding: 0.85rem 1.25rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: var(--resource-label);
