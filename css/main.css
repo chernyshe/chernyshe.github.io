@@ -7,8 +7,10 @@
 
 body {
     background-color: #090d16; /* Cold near-black backdrop */
-    font-family: 'Quattrocento', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.05rem; 
+    background-image: radial-gradient(#1e293b 0.75px, transparent 0.75px);
+    background-size: 16px 16px; /* Subtle sub-pixel dot grid */
     line-height: 1.7;
     margin: 0;
     padding: 0;
@@ -17,14 +19,15 @@ body {
 }
 
 a:link, a:visited {
-    color: #9ca3af; /* Cool silver link text */
+    color: #e2e8f0; /* Near-white link text */
     text-decoration: none;
-    transition: color 0.15s ease;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 a:hover {
-    color: #f3f4f6; /* Bright white-grey hover */
-    text-decoration: underline;
+    color: #ffffff; /* Bright white highlight */
+    border-color: #9ca3af; /* Crisp silver border on hover */
 }
 
 a:active {
@@ -79,7 +82,7 @@ h5, h6 {
 ----------------------------------------------------------*/
 
 .page {
-    max-width: 960px;
+  max-width: 960px;
     width: 92%;
     background-color: #161e2e; /* Cold slate-grey card */
     margin: 30px auto;
@@ -311,4 +314,298 @@ textarea {
 
 textarea:focus {
     border-color: #94a3b8;
+}
+.academic-links {
+    margin: 1.5rem 0;
+    padding: 0.75rem 0;
+    border-top: 1px solid #2d3748;
+    border-bottom: 1px solid #2d3748;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.academic-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #d1d5db;
+}
+
+.academic-links a:hover {
+    color: #ffffff;
+}
+.resources-grid {
+    display: flex;
+    gap: 3.5rem;
+    margin: 1.75rem 0;
+}
+
+.resource-label {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Clean sans-serif contrast */
+    font-size: 1.1rem;
+    font-variant: bold small-caps;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #f3f4f6; /* Bright off-white heading */
+    text-transform: uppercase;
+    /* border-left: 3px solid #4b5563; /* Distinct left accent bar */
+    border-bottom: 1px solid #374151; /* Subtle divider under the label */
+    margin-bottom: 0.85rem;
+}
+
+.resources-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources-grid li {
+    margin-bottom: 0.4rem;
+}
+
+.resources-grid a {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PUBLICATIONS PAGE COMPONENT
+   ========================================================================== */
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    counter-reset: pub-counter;
+}
+
+.pub-item {
+    position: relative;
+    padding-left: 2.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #1f2937;
+    counter-increment: pub-counter;
+}
+
+.pub-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Counter indicator [1], [2], [3] */
+.pub-item::before {
+    content: "[" counter(pub-counter) "]";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6b7280;
+}
+
+.pub-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f3f4f6;
+    line-height: 1.4;
+    margin-bottom: 0.35rem;
+}
+
+.pub-meta {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+}
+
+.pub-authors {
+    color: #d1d5db;
+}
+
+.pub-authors::after {
+    content: " • ";
+    color: #4b5563;
+    margin: 0 0.25rem;
+}
+
+.pub-journal {
+    font-style: italic;
+    color: #9ca3af;
+}
+
+/* Action Badges/Buttons */
+.pub-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pub-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1f2937;
+    color: #d1d5db !important;
+    border: 1px solid #374151;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.15s ease;
+}
+
+.pub-btn:hover {
+    background-color: #374151;
+    color: #ffffff !important;
+    border-color: #4b5563;
+    transform: translateY(-1px);
+}
+
+.nav-footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1f2937;
+}
+
+.back-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+/* Disabled Action Badge */
+.pub-btn-disabled,
+.pub-btn-disabled:hover {
+    background-color: #111827;
+    color: #4b5563 !important;
+    border-color: #1f2937;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none !important;
+    box-shadow: none;
+}
+
+/* COLLAPSIBLE CATEGORY CONTAINERS
+----------------------------------------------------------*/
+
+.repo-group {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.repo-group[open] {
+    border-color: #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.repo-group-title {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f3f4f6;
+    background-color: #161e2e;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.repo-group-title::-webkit-details-marker {
+    display: none;
+}
+
+.repo-group-title::before {
+    content: "▶";
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #9ca3af;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease, color 0.15s ease;
+}
+
+.repo-group[open] .repo-group-title::before {
+    transform: rotate(90deg);
+    color: #60a5fa;
+}
+
+.repo-group-title:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.repo-group-title:hover::before {
+    color: #ffffff;
+}
+
+.repo-count {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: #9ca3af;
+    margin-left: 0.35rem;
+}
+
+/* COMPACT FILE LIST FORMAT INSIDE CATEGORIES
+----------------------------------------------------------*/
+
+.repo-list {
+    list-style: none;
+    padding: 0.5rem 1.25rem;
+    margin: 0;
+}
+
+.repo-item-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1f2937;
+}
+
+.repo-item-compact:last-child {
+    border-bottom: none;
+}
+
+.repo-left-content {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.repo-title-compact {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.repo-date-compact {
+    font-size: 0.82rem;
+    color: #9ca3af;
+}
+
+.repo-btn-compact {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    background-color: #1f2937;
+    color: #38bdf8;
+    text-decoration: none;
+    border: 1px solid #374151;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.repo-btn-compact:hover {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #ffffff;
 }
