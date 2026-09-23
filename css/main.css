@@ -1,296 +1,314 @@
 /* DEFAULTS
 ----------------------------------------------------------*/
 
-body   
-{
-    background: lightgray;
-font-family: 'Quattrocento', serif;
-    font-size: 14pt; 
- /*   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
- /*   font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, serif; */
-    margin: 0px;
-    padding: 0px;
-    color: #696969;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-a:link, a:visited
-{
-    color: #034af3;
+body {
+    background-color: #090d16; /* Cold near-black backdrop */
+    font-family: 'Quattrocento', serif;
+    font-size: 1.05rem; 
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    color: #d1d5db; /* Crisp silver-grey body text */
+    -webkit-font-smoothing: antialiased;
 }
 
-a:hover
-{
-    color: #1d60ff;
+a:link, a:visited {
+    color: #9ca3af; /* Cool silver link text */
     text-decoration: none;
+    transition: color 0.15s ease;
 }
 
-a:active
-{
-    color: #034af3;
+a:hover {
+    color: #f3f4f6; /* Bright white-grey hover */
+    text-decoration: underline;
 }
 
-p
-{
-    margin-bottom: 10px;
-    line-height: 1.6em;
+a:active {
+    color: #9ca3af;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
 
 /* HEADINGS   
 ----------------------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6
-{
-    font-size: 1.5em;
-    color: #666666;
+h1, h2, h3, h4, h5, h6 {
+    color: #f9fafb; /* Ice white headings */
     font-variant: small-caps;
     text-transform: none;
-    font-weight: 200;
-    margin-bottom: 0px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
-h1
-{
-    font-size: 1.6em;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
 }
 
-h2
-{
-    font-size: 1.5em;
+h2 {
+    font-size: 1.45rem;
     font-weight: 600;
 }
 
-h3
-{
-    font-size: 1.2em;
+h3 {
+    font-size: 1.25rem;
 }
 
-h4
-{
-    font-size: 1.1em;
+h4 {
+    font-size: 1.1rem;
 }
 
-h5, h6
-{
-    font-size: 1em;
+h5, h6 {
+    font-size: 1rem;
 }
 
-/* this rule styles <h1> and <h2> tags that are the 
-first child of the left and right table columns */
-.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
-{
-    margin-top: 0px;
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0;
 }
-
 
 /* PRIMARY LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
 
-.page
-{
-    width: 960px;
-    background-color: #fff;
-    margin: 20px auto 0px auto;
-    border: 1px solid #496077;
+.page {
+    max-width: 960px;
+    width: 92%;
+    background-color: #161e2e; /* Cold slate-grey card */
+    margin: 30px auto;
+    border: 1px solid #2d3748;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
-.header
-{
+.header {
     position: relative;
-    margin: 0px;
-    padding: 0px;
-    background: #4b6c9e;
+    margin: 0;
+    padding: 1.25rem;
+    background: #27303f; /* Deep charcoal top header */
     width: 100%;
 }
 
-.header h1
-{
+.header h1 {
     font-weight: 700;
-    margin: 0px;
-    padding: 0px 0px 0px 20px;
-    color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #f9fafb;
     border: none;
-    line-height: 2em;
-    font-size: 2em;
+    line-height: 1.2;
+    font-size: 2rem;
 }
 
-.main
-{
-    padding: 0px 12px;
-    margin: 12px 8px 8px 8px;
+.main {
+    padding: 1.5rem;
     min-height: 420px;
 }
 
-.leftCol
-{
-    padding: 6px 0px;
-    margin: 12px 8px 8px 8px;
-    width: 200px;
+.leftCol {
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 200px;
     min-height: 200px;
 }
 
-.footer
-{
-    color: #4e5766;
-    padding: 8px 0px 0px 0px;
-    margin: 0px auto;
+.footer {
+    color: #6b7280;
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
     text-align: center;
-    line-height: normal;
+    font-size: 0.9rem;
+    border-top: 1px solid #2d3748;
 }
-
 
 /* TAB MENU   
 ----------------------------------------------------------*/
 
-div.hideSkiplink
-{
-    background-color:#3a4f63;
-    width:100%;
+div.hideSkiplink {
+    background-color: #111827; /* Near-black nav bar container */
+    width: 100%;
 }
 
-div.menu
-{
-    padding: 4px 0px 4px 8px;
+div.menu {
+    padding: 0;
 }
 
-div.menu ul
-{
+div.menu ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
-    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
 }
 
-div.menu ul li a, div.menu ul li a:visited
-{
-    background-color: #465c71;
-    border: 1px #4e667d solid;
-    color: #dde4ec;
+div.menu ul li {
+    margin: 0;
+}
+
+div.menu ul li a, div.menu ul li a:visited {
+    background-color: #1f2937; /* Dark slate-grey tabs */
+    border: none;
+    border-right: 1px solid #374151;
+    color: #d1d5db;
     display: block;
     line-height: 1.35em;
-    padding: 4px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     white-space: nowrap;
+    font-weight: 600;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-div.menu ul li a:hover
-{
-    background-color: #bfcbd6;
-    color: #465c71;
+div.menu ul li a:hover {
+    background-color: #374151; /* Medium cold grey hover */
+    color: #ffffff;
     text-decoration: none;
 }
 
-div.menu ul li a:active
-{
-    background-color: #465c71;
-    color: #cfdbe6;
+div.menu ul li a:active {
+    background-color: #27303f;
+    color: #ffffff;
     text-decoration: none;
 }
 
-/* FORM ELEMENTS   
+/* FORM ELEMENTS & PGP TEXTAREA
 ----------------------------------------------------------*/
 
-fieldset
-{
-    margin: 1em 0px;
-    padding: 1em;
-    border: 1px solid #ccc;
+fieldset {
+    margin: 1.5em 0;
+    padding: 1.25em;
+    border: 1px solid #2d3748;
+    border-radius: 4px;
+    background-color: #111827;
 }
 
-fieldset p 
-{
-    margin: 2px 12px 10px 10px;
+fieldset p {
+    margin: 0.25rem 0 0.75rem 0;
 }
 
-fieldset.login label, fieldset.register label, fieldset.changePassword label
-{
+fieldset.login label, fieldset.register label, fieldset.changePassword label {
     display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
 }
 
-fieldset label.inline 
-{
+fieldset label.inline {
     display: inline;
 }
 
-legend 
-{
+legend {
     font-size: 1.1em;
-    font-weight: 600;
-    padding: 2px 4px 8px 4px;
+    font-weight: 700;
+    padding: 0 6px;
+    color: #f9fafb;
 }
 
-input.textEntry 
-{
-    width: 320px;
-    border: 1px solid #ccc;
+input.textEntry, input.passwordEntry {
+    width: 100%;
+    max-width: 320px;
+    padding: 6px 10px;
+    background-color: #161e2e;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-input.passwordEntry 
-{
-    width: 320px;
-    border: 1px solid #ccc;
+input.textEntry:focus, input.passwordEntry:focus {
+    outline: none;
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.2);
 }
 
-div.accountInfo
-{
-    width: 42%;
+textarea {
+    background-color: #111827; /* Dark black-grey for PGP box */
+    color: #d1d5db;
+    border: 1px solid #374151;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+textarea:focus {
+    border-color: #9ca3af;
+}
+
+div.accountInfo {
+    width: 100%;
+    max-width: 420px;
 }
 
 /* MISC  
 ----------------------------------------------------------*/
 
-.clear
-{
+.clear {
     clear: both;
 }
 
-.title
-{
+.title {
     display: block;
     float: left;
     text-align: left;
     width: auto;
 }
 
-.loginDisplay
-{
-    font-size: 1.1em;
+.loginDisplay {
+    font-size: 0.95rem;
     display: block;
     text-align: right;
-    padding: 10px;
-    color: White;
+    padding: 10px 15px;
+    color: #d1d5db;
 }
 
-.loginDisplay a:link
-{
-    color: white;
+.loginDisplay a:link, .loginDisplay a:visited, .loginDisplay a:hover {
+    color: #f9fafb;
+    text-decoration: underline;
 }
 
-.loginDisplay a:visited
-{
-    color: white;
+.failureNotification {
+    font-size: 1.1em;
+    color: #ef4444;
+    font-weight: 700;
 }
 
-.loginDisplay a:hover
-{
-    color: white;
-}
-
-.failureNotification
-{
-    font-size: 1.2em;
-    color: Red;
-}
-
-.bold
-{
+.bold {
     font-weight: bold;
 }
 
-.submitButton
-{
+.submitButton {
     text-align: right;
     padding-right: 10px;
+    margin-top: 10px;
+}
+textarea {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+textarea:focus {
+    border-color: #94a3b8;
 }
