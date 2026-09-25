@@ -703,3 +703,117 @@ div.accountInfo {
     border-color: var(--btn-hover-border);
     color: var(--heading-color);
 }
+.credential-box {
+    background-color: var(--repo-group-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+}
+
+.credential-main {
+    margin-bottom: 0.4rem;
+}
+
+.credential-degree {
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.credential-sep {
+    color: var(--pub-author-sep);
+    margin: 0 0.35rem;
+}
+
+.credential-org {
+    color: var(--text-color);
+}
+
+.credential-details {
+    color: var(--pub-meta);
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.credential-label {
+    font-weight: 600;
+    color: var(--resource-label);
+    margin-right: 0.3rem;
+}
+
+.credential-thesis-link {
+    color: var(--btn-accent-text);
+    font-weight: 500;
+}
+.archived-site-link,
+.footer-meta {
+    font-size: 0.82rem;
+    color: var(--pub-meta);
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--pub-border);
+}
+
+.archived-site-link a,
+.footer-meta a {
+    color: var(--pub-meta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.archived-site-link a:hover,
+.footer-meta a:hover {
+    color: var(--heading-color);
+}
+
+.pgp-container {
+    margin-top: 2rem;
+}
+
+.pgp-content {
+    padding: 1rem 1.25rem 1.25rem 1.25rem;
+    border-top: 1px solid var(--pub-border);
+}
+
+.pgp-download-line {
+    font-size: 0.88rem;
+    color: var(--pub-meta);
+    margin-bottom: 0.75rem;
+}
+
+.pgp-download-line a {
+    color: var(--btn-accent-text);
+    text-decoration: underline;
+}
+/* SITE FOOTER
+----------------------------------------------------------*/
+
+.site-footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid var(--card-border);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--pub-meta);
+}
+
+.footer-sep {
+    margin: 0 0.4rem;
+    color: var(--pub-author-sep);
+    font-size: 0.75rem;
+}
+
+.footer-link {
+    color: var(--pub-meta);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+    color: var(--heading-color);
+}
+
